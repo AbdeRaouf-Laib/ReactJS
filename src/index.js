@@ -1,17 +1,70 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react"
+import ReactDOM   from "react-dom/client"
+/*
+const Gretting = () => {
+  return <h2>Hello world</h2>
+}
+function Gretting(){
+  return React.createElement('h2',{},'Hello world');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+}*/
+/*
+function Gretting() {
+  return React.createElement(
+    'div',
+    {},
+    React.createElement('h2',{},'Hello world')
+  )
+}*/
+/*Ruls: one function return one compenents */
+/*
+const Gretting = () =>{
+  return(
+    <div>
+      <h1>Hello world</h1>
+      <ul>
+        <li>
+          <a href = '#'>Hello</a>
+        </li>
+      </ul>
+    </div>
+    /* to add a 2nd one
+        <div>
+      <h1>Hello world</h1>
+      <ul>
+        <li>
+          <a href = '#'>Hello</a>
+        </li>
+      </ul>
+    </div> 
+  )
+}*/
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Gretting = () =>{
+  return(
+    <React.Fragment>
+   <div>
+      <h1>Hello world</h1>
+      <ul>
+        <li>
+          <a href = '#'>Hello</a>
+        </li>
+      </ul>
+    </div>
+    /* to add a 2nd one
+        <div className='someValue'>
+      <h1>Hello world</h1>
+      <ul>
+        <li>
+          <a href = '#'>Hello</a>
+        </li>
+      </ul>
+    </div> 
+    </React.Fragment>  )
+}
+export default Gretting
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<Gretting></Gretting>)
